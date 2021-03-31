@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 
-export default function Links() {
+export function Links() {
   return (
     <div className={styles.grid}>
       <a href="https://nextjs.org/docs" className={styles.card}>
@@ -26,9 +26,7 @@ export default function Links() {
         className={styles.card}
       >
         <h3>Deploy &rarr;</h3>
-        <p>
-          Instantly deploy your Next.js site to a public URL with Vercel.
-        </p>
+        <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
       </a>
     </div>
   );
