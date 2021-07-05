@@ -28,8 +28,7 @@ const ITEMS = [
   },
 ];
 
-export function Main(props) {
-  const { page } = props;
+export const Main = (props) => {
   const [items, setItems] = useState(ITEMS);
   const handleReduce = useCallback(() => {
     setItems(prevItems => {
@@ -38,7 +37,7 @@ export function Main(props) {
   },[]);
   return (
     <main className={classes.main}>
-      <Headline page={page} handleReduce={handleReduce}>
+      <Headline page={props.page} handleReduce={handleReduce}>
         <code className={classes.code}>{items.length}</code>
       </Headline>
       <Links items={items} />
